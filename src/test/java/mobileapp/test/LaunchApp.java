@@ -41,11 +41,8 @@ public class LaunchApp {
         System.out.println("welcome to my world");
         loginPage.loginAndMove(driver,extent);
         System.out.println("second entry to my world");
-
-
-
-
-
+        loginPage.menuItemNavigate(driver,extent);
+        Thread.sleep(8000);
 
     }
 
