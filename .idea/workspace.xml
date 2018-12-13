@@ -572,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544685860239</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="this is for excel data">
+      <created>1544685920958</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1544685920958</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -672,7 +679,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="hgf" />
-    <option name="LAST_COMMIT_MESSAGE" value="hgf" />
+    <MESSAGE value="this is for excel data" />
+    <option name="LAST_COMMIT_MESSAGE" value="this is for excel data" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
