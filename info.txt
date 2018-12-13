@@ -1,0 +1,8 @@
+Project contains :
+
+Auto Launch of Appium
+Getting Appium into a file
+log4j implemented
+screenshot for failed test methods implemented
+Retry the failed test method implemented
+Getting test data from excel sheet implemented
