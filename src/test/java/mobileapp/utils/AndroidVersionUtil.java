@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Set;
 
 /**
- * @author Pinaki
- * Util class to fetch information about the android versions
+ * @author froyo
+ * TestController class to fetch information about the android versions
  */
 public class AndroidVersionUtil {
     private static HashMap<String,Integer> sMap =null;

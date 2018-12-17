@@ -8,8 +8,8 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import io.appium.java_client.android.AndroidDriver;
 import mobileapp.utils.AppConstants;
-import mobileapp.utils.ExcelUtils;
 import mobileapp.utils.Scroller;
+import mobileapp.utils.XLSTestDataLoader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,6 +24,7 @@ public class LoginPage {
     private int iTestCaseRow;
 
 
+
     Scroller sc = null;
     @FindBy(id = AppConstants.PACKAGE_NAME + AppConstants.LOGIN_BUTTON)
     private WebElement loginButton;
@@ -36,17 +37,19 @@ public class LoginPage {
     private WebElement loginContinue;
 
 
-    ExtentTest test;
-    ExtentReports extent;
 
-    public void loginAndMove(AndroidDriver driver, ExtentReports extent) throws InterruptedException {
-        test = extent.startTest("method 1");
+
+
+    public void loginAndMove(AndroidDriver driver, String username, String password) throws InterruptedException {
+       // test = extent.startTest("method 1");
         sc = new Scroller();
         loginButton.click();
         Thread.sleep(2000);
         loginEmail.sendKeys("credr3.whizdm@gmail.com");
+       // loginEmail.sendKeys(username);
         Thread.sleep(2000);
-        loginPassword.sendKeys("mangomist");
+       loginPassword.sendKeys("mangomist");
+       //loginPassword.sendKeys(password);
         Thread.sleep(2000);
         loginContinue.click();
         Thread.sleep(7000);
@@ -56,7 +59,7 @@ public class LoginPage {
     }
 
 
-    public void menuItemNavigate(AndroidDriver driver, ExtentReports extent) throws InterruptedException {
+    public void menuItemNavigate(AndroidDriver driver) throws InterruptedException {
 
         WebElement homeMenu = driver.findElement(By.xpath("//android.widget.TextView[@text='Home']"));
         WebElement categoryMenu = driver.findElement(By.xpath("//android.widget.TextView[@text='Categories']"));
@@ -95,29 +98,5 @@ public class LoginPage {
     }
 
 
-
-    @DataProvider(name = "loginData")
-    public Object[][] getLoginData(Method m)  throws Exception{
-        ExcelUtils.setExcelFile(AppConstants.DATAEXCELFILEPATH,"Sheet1");
-
-        sTestCaseName = this.toString();
-
-        // From above method we get long test case name including package and class name etc.
-
-        // The below method will refine your test case name, exactly the name use have used
-
-        sTestCaseName = ExcelUtils.getTestCaseName(this.toString());
-
-        // Fetching the Test Case row number from the Test Data Sheet
-
-        // Getting the Test Case name to get the TestCase row from the Test Data Excel sheet
-
-        iTestCaseRow = ExcelUtils.getRowContains(sTestCaseName,0);
-
-        Object[][] testObjArray = ExcelUtils.getTableArray("D://ToolsQA//OnlineStore//src//testData//TestData.xlsx","Sheet1",iTestCaseRow);
-
-        return (testObjArray);
-
-    }
 
 }

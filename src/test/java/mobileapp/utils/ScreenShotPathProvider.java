@@ -3,7 +3,7 @@ package mobileapp.utils;
 import java.util.UUID;
 
 /**
- * Util class to create a new path every time we need
+ * TestController class to create a new path every time we need
  * to generate a path for screenshot via appium
  * <p>
  * For this we are using @{@link UUID} to generate

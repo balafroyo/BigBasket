@@ -7,7 +7,7 @@ import org.apache.commons.lang3.StringUtils;
 import java.io.IOException;
 
 
-public class Util {
+public class TestController {
 
     public static final String DEFAULT_JSON_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSSZ";
 
@@ -58,7 +58,7 @@ public class Util {
 
     public static void takeScreenShot(AndroidDriver driver) {
         try {
-            AndroidSetup.takeScreenShot(driver, ScreenShotPathProvider.generateNewPath());
+            AppiumController.takeScreenShot(driver, ScreenShotPathProvider.generateNewPath());
         } catch (IOException e) {
             e.printStackTrace();
             ScreenShotPathProvider.makeCurrentPathEmpty();

@@ -3,104 +3,67 @@ package mobileapp.test;
 /**
  * @author froyo
  */
-import com.relevantcodes.extentreports.ExtentReports;
 
-import java.io.File;
-
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
 import io.appium.java_client.android.AndroidDriver;
 import mobileapp.pageobject.LoginPage;
-import mobileapp.utils.AndroidSetup;
-import mobileapp.utils.AndroidVersionUtil;
-import mobileapp.utils.ScreenShotPathProvider;
-import mobileapp.utils.Util;
-import org.apache.commons.lang3.StringUtils;
+import mobileapp.utils.*;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.ITestResult;
 import org.testng.annotations.*;
+
 import java.io.IOException;
+import java.lang.reflect.Method;
 
 public class LaunchApp {
-    ExtentReports extent;
-    ExtentTest logger;
     public AndroidDriver driver = null;
     private LoginPage loginPage;
+    LoginPage loginFactory;
+    XLSTestDataLoader testdataLoader = new XLSTestDataLoader();
 
-
-
-    @Test(priority = 1)
-    public void onboarding() throws InterruptedException {
-
-        logger = extent.startTest("LauncherActivity");
-        String platformVersion = Util.getPlatformVersion(driver);
+    @Test(groups = {"sanity"},dataProvider="loginData")
+    public void onboarding(String username, String password) throws InterruptedException
+    {
+        String platformVersion = TestController.getPlatformVersion(driver);
         Integer apiLevelFromVersion = AndroidVersionUtil.getApiLevelFromVersion(platformVersion);
         System.out.println("API level:" + apiLevelFromVersion);
         Thread.sleep(8000);
         System.out.println("welcome to my world");
-        loginPage.loginAndMove(driver,extent);
+        loginPage.loginAndMove(driver, username, password);
         System.out.println("second entry to my world");
-        loginPage.menuItemNavigate(driver,extent);
+        loginPage.menuItemNavigate(driver);
         Thread.sleep(8000);
 
     }
 
 
-    @BeforeTest
-    public void startreport() {
-        extent = new ExtentReports(System.getProperty("user.dir") + "test-output/NODatauser.html", true);
-        extent
-                .addSystemInfo("Host Name", "Bala")
-                .addSystemInfo("Environment", "QA")
-                .addSystemInfo("User Name", "Bala");
-        extent.loadConfig(new File(System.getProperty("user.dir") + "\\extent-config.xml"));
-
-    }
-
-    @AfterMethod
-    public void getResult(ITestResult result) {
-        if (result.getStatus() == ITestResult.FAILURE) {
-            logger.log(LogStatus.FAIL, "Test Case Failed is " + result.getName());
-            logger.log(LogStatus.FAIL, "Test Case Failed is " + result.getThrowable());
-            //To capture screenshot path and store the path of the screenshot in the string "screenshotPath"
-            //We do pass the path captured by this method in to the extent reports using "logger.addScreenCapture" method.
-
-            if (StringUtils.isNotEmpty(ScreenShotPathProvider.getCurrentPath())) {
-                String screenshotPath = AndroidSetup.getDestination(ScreenShotPathProvider.getCurrentPath());
-                //To add it in the extent report
-                logger.log(LogStatus.FAIL, logger.addScreenCapture(screenshotPath));
-            }
-        } else if (result.getStatus() == ITestResult.SKIP) {
-            logger.log(LogStatus.SKIP, "Test Case Skipped is " + result.getName());
-        }
-        // ending test
-        //endTest(logger) : It ends the current test and prepares to create HTML report
-        extent.endTest(logger);
-        extent.flush();
-    }
-
     @BeforeSuite
     public void startAppium() throws IOException, InterruptedException {
-        AndroidSetup.stopAppium();
-        driver = AndroidSetup.startAppium();
-
+        AppiumController.stopAppium();
+        driver = AppiumController.startAppium();
         loginPage = PageFactory.initElements(driver, LoginPage.class);
 
-        extent = new ExtentReports(System.getProperty("user.dir") + "test-output/datauser.html", true);
-        extent
-                .addSystemInfo("Host Name", "Froyo")
-                .addSystemInfo("Environment", "MySpace")
-                .addSystemInfo("User Name", "Froyo");
-        extent.loadConfig(new File(System.getProperty("user.dir") + "\\extent-config.xml"));
     }
 
     @AfterSuite
 
     public void stopAppium() throws IOException, InterruptedException {
-
         driver.quit();
-        AndroidSetup.stopAppium();
+        AppiumController.stopAppium();
+    }
+
+
+    @DataProvider(name = "loginData")
+    public Object[][] getLoginData(Method m) {
+        Object[][] retObjArr = null;
+        String str = System.getProperty("user.dir");
+        System.out.println("printing the location string---"+str);
+        System.out.println(str + "/resources/TestData.xls -> "+"login -> "+ m.getName());
+        try {
+            retObjArr = testdataLoader.getTableArray(
+                    System.getProperty("user.dir") + "/resources/TestData.xls","login", m.getName());
+        } catch (Exception e) {
+            System.out.println("Error while reading data from xls " + e);
+        }
+        return retObjArr;
     }
 
 

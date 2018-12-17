@@ -24,7 +24,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class AndroidSetup {
+public class AppiumController {
 
 
     private static Process process;
@@ -59,7 +59,7 @@ public class AndroidSetup {
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "6.0.1");
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "NEXUS 5");
         capabilities.setCapability("appPackage", "com.bigbasket.mobileapp");
-       // capabilities.setCapability("appActivity", "com.whizdm.moneyview.loans.launcher.LauncherActivity");
+  //     capabilities.setCapability("appActivity", "com.whizdm.moneyview.loans.launcher.LauncherActivity");
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability(MobileCapabilityType.APP, "/Users/balakrishnan/Desktop/APK/bigbasketNovember.apk");
         capabilities.setCapability("autoGrantPermission", "true");
