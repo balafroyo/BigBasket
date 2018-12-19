@@ -3,7 +3,13 @@ package mobileapp.utils;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.remote.Augmenter;
+
+import java.io.File;
 import java.io.IOException;
 
 
@@ -56,12 +62,17 @@ public class TestController {
 
 
 
-    public static void takeScreenShot(AndroidDriver driver) {
+    public static void takeScreenShot(AndroidDriver iosDriver, String testName){
+        iosDriver =  (AndroidDriver) new Augmenter().augment(iosDriver);
+        //Get the screenshot
+        File scrFile = ((TakesScreenshot) iosDriver).getScreenshotAs(OutputType.FILE);
+        System.out.println("Screenshot taken for "+testName);
         try {
-            AppiumController.takeScreenShot(driver, ScreenShotPathProvider.generateNewPath());
+            File testScreenShot = new File("./screenshots/"+testName+".jpg");
+            //Copy the file to screenshots folder
+            FileUtils.copyFile(scrFile, testScreenShot);
         } catch (IOException e) {
             e.printStackTrace();
-            ScreenShotPathProvider.makeCurrentPathEmpty();
         }
     }
 }

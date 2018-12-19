@@ -6,3 +6,13 @@ log4j implemented
 screenshot for failed test methods implemented
 Retry the failed test method implemented
 Getting test data from excel sheet implemented
+
+
+---
+pending
+extent report
+jenkins
+screenshot
+config properties
+refractor the code
+add valid comments and steps

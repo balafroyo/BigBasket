@@ -62,7 +62,7 @@ public class LoginPage {
     public void menuItemNavigate(AndroidDriver driver) throws InterruptedException {
 
         WebElement homeMenu = driver.findElement(By.xpath("//android.widget.TextView[@text='Home']"));
-        WebElement categoryMenu = driver.findElement(By.xpath("//android.widget.TextView[@text='Categories']"));
+        WebElement categoryMenu = driver.findElement(By.xpath("//android.widget.TextView[@text='Categories1']"));
         WebElement searchMenu = driver.findElement(By.xpath("//android.widget.TextView[@text='Search']"));
         WebElement offersMenu = driver.findElement(By.xpath("//android.widget.TextView[@text='Offers']"));
         WebElement basketMenu = driver.findElement(By.xpath("//android.widget.TextView[@text='Basket']"));
@@ -83,6 +83,7 @@ public class LoginPage {
         Thread.sleep(4000);*/
 
     }
+
 
 
     public void categoryMenuItem(AndroidDriver driver, ExtentReports extent)throws Exception{
