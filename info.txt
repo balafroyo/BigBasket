@@ -12,7 +12,28 @@ Getting test data from excel sheet implemented
 pending
 extent report
 jenkins
-screenshot
 config properties
 refractor the code
 add valid comments and steps
+assert
+
+    /*
+    *
+    * testng framework
+    * add sanity and functional control testng may be by creating different 2 testng
+    * this also can be done by two jenkins scripts pointing
+    *
+    * data provider concept
+    *
+    * class control
+    * make one commom point to start
+    *
+    * always add comment to each method
+    *
+    * use asset methods
+    *
+    *
+    *
+    *
+    *
+    * */

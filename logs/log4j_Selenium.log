@@ -1,0 +1,9 @@
+16:16:23,380 DEBUG devpinoyLogger<strong>{1}</strong>:36 - Debug Message
+16:16:23,386 ERROR devpinoyLogger<strong>{1}</strong>:37 - Error Message
+16:16:23,388 FATAL devpinoyLogger<strong>{1}</strong>:38 - Fatal Message
+16:16:23,390  INFO devpinoyLogger<strong>{1}</strong>:39 - Info Message
+16:16:23,391  INFO devpinoyLogger<strong>{1}</strong>:92 - Passed : testLog4J method
+16:16:23,604 DEBUG devpinoyLogger<strong>{1}</strong>:50 - thank you 1
+16:16:31,607 DEBUG devpinoyLogger<strong>{1}</strong>:53 - thank you 2
+16:17:04,487 DEBUG devpinoyLogger<strong>{1}</strong>:56 - thank you 3
+16:17:22,168  INFO devpinoyLogger<strong>{1}</strong>:92 - Passed : onboarding method

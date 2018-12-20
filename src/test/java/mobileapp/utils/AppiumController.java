@@ -22,18 +22,22 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class AppiumController {
 
 
-    private static Process process;
+    // private static Process process;
     private static String folderPath = "";
-    private static String APPIUMSERVERSTART = "appium";
+    //  private static String APPIUMSERVERSTART = "appium";
+
 
     public static AndroidDriver startAppium() throws IOException, InterruptedException {
-        //creating new folder path for every time we start the test suite
-        //the folder name will be created as per the time the test started
+
+
+        //creating new folder path for every time we start the tests suite
+        //the folder name will be created as per the time the tests started
         //folder name: screenshots_dd-MM-yyyy_hhmmss
         Date currentTime = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy_hhmmss");
@@ -41,27 +45,21 @@ public class AppiumController {
         folderPath = "screenshots_" + folderPath;
         AndroidDriver driver = null;
         AppiumDriverLocalService driverLocalService;
-
+        Properties properties = TestController.getProperties();
 
         AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
         service.start();
         System.out.println("driverLocalService started successfully");
 
 
-
         String url = service.getUrl().toString();
         DesiredCapabilities capabilities = new DesiredCapabilities();
-//com.bigbasket.mobileapp:id/daimajia_slider_image
-
-
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "6.0.1");
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "NEXUS 5");
-        capabilities.setCapability("appPackage", "com.bigbasket.mobileapp");
-  //     capabilities.setCapability("appActivity", "com.whizdm.moneyview.loans.launcher.LauncherActivity");
-        capabilities.setCapability("platformName", "Android");
         capabilities.setCapability(MobileCapabilityType.APP, "/Users/balakrishnan/Desktop/APK/bigbasketNovember.apk");
+        capabilities.setCapability("platformName", properties.getProperty("PLATFORM_NAME"));
+        capabilities.setCapability("platformName", properties.getProperty("PLATFORM_VERSION"));
+        capabilities.setCapability("deviceName", properties.getProperty("DEVICE_NAME"));
+        capabilities.setCapability("appPackage", properties.getProperty("APP_PACKAGE"));
         capabilities.setCapability("autoGrantPermission", "true");
         capabilities.setCapability("unicodeKeyboard", true);
         capabilities.setCapability("resetKeyboard", true);
@@ -91,31 +89,7 @@ public class AppiumController {
         }
     }
 
-    public static String takeScreenShot(WebDriver wdriver, String screenshotName) throws IOException {
-        wdriver = new Augmenter().augment(wdriver);
 
-        //Get the screenshot
-        File scrFile = ((TakesScreenshot) wdriver).getScreenshotAs(OutputType.FILE);
-        System.out.println("Screenshot taken for " + screenshotName);
-
-        //after execution, you could see a folder "FailedTestsScreenshots" under src folder
-        String destination = getDestination(screenshotName);
-        File finalDestination = new File(destination);
-
-        FileUtils.copyFile(scrFile, finalDestination);
-        //Returns the captured file path
-        return destination;
-    }
-
-    public static String getDestination(String screenshotName) {
-        String destination;
-        if (StringUtils.isNotEmpty(folderPath))
-            destination = Config.FAILED_SCREENSHOT_FOLDER_PATH + folderPath + "/" + screenshotName + ".png";
-        else
-            destination = Config.FAILED_SCREENSHOT_FOLDER_PATH + screenshotName + ".png";
-
-        return destination;
-    }
 }
 
 

@@ -1,12 +1,11 @@
-package mobileapp.test;
+package mobileapp.tests;
 
 /**
  * @author froyo
  */
 
-import com.oracle.tools.packager.Log;
 import io.appium.java_client.android.AndroidDriver;
-import mobileapp.pageobject.LoginPage;
+import mobileapp.pageobjects.LoginScreenFactory;
 import mobileapp.utils.*;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.support.PageFactory;
@@ -18,10 +17,10 @@ import java.lang.reflect.Method;
 
 import org.apache.log4j.Logger;
 
-public class LaunchApp {
+public class LoginTest {
     public AndroidDriver driver = null;
-    private LoginPage loginPage;
-    LoginPage loginFactory;
+    private LoginScreenFactory loginScreenFactory;
+    LoginScreenFactory loginFactory;
     XLSTestDataLoader testdataLoader = new XLSTestDataLoader();
 
     String testName;
@@ -53,11 +52,11 @@ public class LaunchApp {
         Thread.sleep(8000);
         log.debug("thank you 2");
         System.out.println("welcome to my world");
-        loginPage.loginAndMove(driver, username, password);
+        loginScreenFactory.loginAndMove(driver, username, password);
         log.debug(
                 "thank you 3");
         System.out.println("second entry to my world");
-        loginPage.menuItemNavigate(driver);
+        loginScreenFactory.menuItemNavigate(driver);
         Thread.sleep(8000);
 
     }
@@ -66,7 +65,7 @@ public class LaunchApp {
     public void startAppium() throws IOException, InterruptedException {
         AppiumController.stopAppium();
         driver = AppiumController.startAppium();
-        loginPage = PageFactory.initElements(driver, LoginPage.class);
+        loginScreenFactory = PageFactory.initElements(driver, LoginScreenFactory.class);
 
     }
 

@@ -10,31 +10,28 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.Augmenter;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Properties;
 
 
 public class TestController {
 
     public static final String DEFAULT_JSON_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSSZ";
 
-    public static void hidekeyboard(AndroidDriver driver) {
+
+
+    public static Properties getProperties() {
+        Properties properties = new Properties();
+        File file = new File("./config/Config.properties");
         try {
-            driver.hideKeyboard();
-        } catch (Exception e) {
-            /*e.printStackTrace();*/
+            FileInputStream fileInput = new FileInputStream(file);
+            properties.load(fileInput);
+            fileInput.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-    }
-
-
-    public static String shaveNonNumeric(String s) {
-        return s.replaceAll("[^\\d.]", "");
-
-    }
-
-
-    public static String shaveQuotes(String res) {
-//        return res.substring(1,res.length()-1);
-        return res.replaceAll("^\"|\"$", "");
+        return properties;
     }
 
 
@@ -44,19 +41,6 @@ public class TestController {
 
     }
 
-
-
-    public static double getDouble(String value, double defaultValue) {
-        if (StringUtils.isEmpty(value))
-            return defaultValue;
-
-        try {
-            return Double.parseDouble(value);
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
-            return defaultValue;
-        }
-    }
 
 
 

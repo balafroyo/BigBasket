@@ -1,0 +1,9 @@
+20/12/2018 16:16:23 devpinoyLogger Debug Message
+20/12/2018 16:16:23 devpinoyLogger Error Message
+20/12/2018 16:16:23 devpinoyLogger Fatal Message
+20/12/2018 16:16:23 devpinoyLogger Info Message
+20/12/2018 16:16:23 devpinoyLogger Passed : testLog4J method
+20/12/2018 16:16:23 devpinoyLogger thank you 1
+20/12/2018 16:16:31 devpinoyLogger thank you 2
+20/12/2018 16:17:04 devpinoyLogger thank you 3
+20/12/2018 16:17:22 devpinoyLogger Passed : onboarding method
