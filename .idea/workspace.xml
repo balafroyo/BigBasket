@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7b4825d-00f0-4aa0-b4c7-e8eb26a05af8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/TestData.xls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/screenshots/onboarding.jpg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/mobileapp/utils/AndroidVersionUtil.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/mobileapp/utils/AppConstants.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/mobileapp/utils/AppiumController.class" />
@@ -14,24 +12,9 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/mobileapp/utils/TestController.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/mobileapp/utils/XLSTestDataLoader.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/mobileapp/utils/Xls_Reader.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_jexcelapi_jxl_2_6_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/logs/log4j_Manual.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/logs/log4j_Selenium.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logs/log4j_Manual.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logs/log4j_Selenium.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/mobileapp/utils/Retry.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/mobileapp/utils/XLSTestDataLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/mobileapp/utils/Xls_Reader.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/mobileapp/pageobject/Documentations.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/mobileapp/pageobject/LoginPage.java" afterPath="$PROJECT_DIR$/src/test/java/mobileapp/pageobjects/LoginScreenFactory.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/mobileapp/test/LaunchApp.java" afterPath="$PROJECT_DIR$/src/test/java/mobileapp/tests/LoginTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestngBig.xml" afterPath="$PROJECT_DIR$/TestngBig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/info.txt" afterPath="$PROJECT_DIR$/info.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/mobileapp/utils/AppiumController.java" afterPath="$PROJECT_DIR$/src/test/java/mobileapp/utils/AppiumController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/mobileapp/utils/TestController.java" afterPath="$PROJECT_DIR$/src/test/java/mobileapp/utils/TestController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/mobileapp/utils/XLSTestDataLoader.java" afterPath="$PROJECT_DIR$/src/test/java/mobileapp/utils/XLSTestDataLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/mobileapp/utils/Xls_Reader.java" afterPath="$PROJECT_DIR$/src/test/java/mobileapp/utils/Xls_Reader.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -611,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545243453937</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="New code for retry and screenshot methods">
+      <created>1545302875981</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1545302875981</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -658,7 +648,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30821916" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30821916" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33013698" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
