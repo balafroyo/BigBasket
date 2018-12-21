@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7b4825d-00f0-4aa0-b4c7-e8eb26a05af8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/mobileapp/utils/AndroidVersionUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/mobileapp/utils/Config.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/mobileapp/utils/ScreenShotPathProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/mobileapp/utils/AndroidVersionUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/mobileapp/utils/Config.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/mobileapp/utils/ScreenShotPathProvider.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/screenshots/onboarding.jpg" afterPath="$PROJECT_DIR$/screenshots/onboarding.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/mobileapp/utils/TestController.class" afterPath="$PROJECT_DIR$/target/test-classes/mobileapp/utils/TestController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestngBig.xml" afterPath="$PROJECT_DIR$/TestngBig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/Config.properties" afterPath="$PROJECT_DIR$/config/Config.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/log4j_Manual.log" afterPath="$PROJECT_DIR$/logs/log4j_Manual.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/log4j_Selenium.log" afterPath="$PROJECT_DIR$/logs/log4j_Selenium.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/mobileapp/pageobjects/LoginScreenFactory.java" afterPath="$PROJECT_DIR$/src/test/java/mobileapp/pageobjects/LoginScreenFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/mobileapp/tests/LoginTest.java" afterPath="$PROJECT_DIR$/src/test/java/mobileapp/tests/LoginTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/mobileapp/utils/TestController.java" afterPath="$PROJECT_DIR$/src/test/java/mobileapp/utils/TestController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/mobileapp/utils/XLSTestDataLoader.java" afterPath="$PROJECT_DIR$/src/test/java/mobileapp/utils/XLSTestDataLoader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/mobileapp/utils/Xls_Reader.java" afterPath="$PROJECT_DIR$/src/test/java/mobileapp/utils/Xls_Reader.java" />
     </list>
@@ -633,7 +618,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545302979145</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="code for log4j and extent report">
+      <created>1545388596247</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1545388596247</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -712,7 +704,8 @@
     <MESSAGE value="New code for retry and screenshot methods" />
     <MESSAGE value="code for config properties and code refractor" />
     <MESSAGE value="latest commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="latest commit" />
+    <MESSAGE value="code for log4j and extent report" />
+    <option name="LAST_COMMIT_MESSAGE" value="code for log4j and extent report" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
