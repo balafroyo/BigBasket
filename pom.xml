@@ -142,7 +142,7 @@
                 <version>2.16</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>TestngBIGB.xml</suiteXmlFile>
+                        <suiteXmlFile>TestngBig.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

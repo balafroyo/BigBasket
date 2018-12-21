@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7b4825d-00f0-4aa0-b4c7-e8eb26a05af8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/mobileapp/utils/TestController.class" afterPath="$PROJECT_DIR$/target/test-classes/mobileapp/utils/TestController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/mobileapp/utils/XLSTestDataLoader.java" afterPath="$PROJECT_DIR$/src/test/java/mobileapp/utils/XLSTestDataLoader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/mobileapp/utils/Xls_Reader.java" afterPath="$PROJECT_DIR$/src/test/java/mobileapp/utils/Xls_Reader.java" />
     </list>
@@ -30,6 +30,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="379">
+              <caret line="144" column="51" lean-forward="false" selection-start-line="144" selection-start-column="51" selection-end-line="144" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="log4j.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/log4j.properties">
           <provider selected="true" editor-type-id="text-editor">
@@ -50,7 +60,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginScreenFactory.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginScreenFactory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/mobileapp/pageobjects/LoginScreenFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-149">
@@ -63,8 +73,8 @@
       <file leaf-file-name="TestngBig.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestngBig.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <state relative-caret-position="135">
+              <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -84,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/mobileapp/reporting/TestLog.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="21" column="65" lean-forward="true" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+              <caret line="21" column="65" lean-forward="false" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#455#456#0" expanded="true" />
@@ -184,15 +194,15 @@
         <option value="$PROJECT_DIR$/config/Config.properties" />
         <option value="$PROJECT_DIR$/src/test/java/mobileapp/utils/ScreenShotPathProvider.java" />
         <option value="$PROJECT_DIR$/src/test/java/mobileapp/utils/TestController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/logs/log4j_Manual.log" />
         <option value="$PROJECT_DIR$/logs/log4j_Selenium.log" />
         <option value="$PROJECT_DIR$/src/test/java/mobileapp/reporting/ExtentTestManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/mobileapp/reporting/ExtentManager.java" />
-        <option value="$PROJECT_DIR$/TestngBig.xml" />
         <option value="$PROJECT_DIR$/src/test/java/mobileapp/tests/LoginTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/mobileapp/reporting/TestLog.java" />
         <option value="$PROJECT_DIR$/src/test/java/mobileapp/pageobjects/LoginScreenFactory.java" />
+        <option value="$PROJECT_DIR$/TestngBig.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -625,7 +635,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545388596247</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="code for log4j and extent report">
+      <created>1545388617299</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1545388617299</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -855,14 +872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="108" column="21" lean-forward="false" selection-start-line="108" selection-start-column="21" selection-end-line="108" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/log4j/log4j/1.2.17/log4j-1.2.17.jar!/org/apache/log4j/PropertyConfigurator.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -905,14 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestngBig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/log4j_Manual.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -950,7 +951,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/mobileapp/reporting/TestLog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" column="65" lean-forward="true" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+          <caret line="21" column="65" lean-forward="false" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#455#456#0" expanded="true" />
@@ -971,6 +972,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-149">
           <caret line="58" column="106" lean-forward="false" selection-start-line="58" selection-start-column="106" selection-end-line="58" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestngBig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="144" column="51" lean-forward="false" selection-start-line="144" selection-start-column="51" selection-end-line="144" selection-end-column="51" />
           <folding />
         </state>
       </provider>
