@@ -6,6 +6,9 @@ package mobileapp.tests;
 
 import io.appium.java_client.android.AndroidDriver;
 import mobileapp.pageobjects.LoginScreenFactory;
+import mobileapp.reporting.ExtentManager;
+import mobileapp.reporting.ExtentTestManager;
+import mobileapp.reporting.TestLog;
 import mobileapp.utils.*;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.support.PageFactory;
@@ -24,36 +27,23 @@ public class LoginTest {
     XLSTestDataLoader testdataLoader = new XLSTestDataLoader();
 
     String testName;
-    Logger log = Logger.getLogger("devpinoyLogger");
 
-    {
-        PropertyConfigurator.configure("./config/log4j.properties");
-    }
 
-    @Test(priority = 1)
-    public void testLog4J() {
-        System.out.println("inside the log4j method");
-        log.debug("Debug Message");
-        log.error("Error Message");
-        log.fatal("Fatal Message");
-        log.info("Info Message");
-        System.out.println("log.isInfoEnabled() -> " + log.isInfoEnabled());
-        System.out.println("log.isDebugEnabled() -> " + log.isDebugEnabled());
-        System.out.println("log.isTraceEnabled() -> " + log.isTraceEnabled());
-    }
 
 
     @Test(groups = {"sanity"}, dataProvider = "loginData", priority = 2,retryAnalyzer=Retry.class)
     public void onboarding(String username, String password) throws InterruptedException {
+        TestLog.testStart("heolllo ", "onboarding method");
+        TestLog.stepInfo("welcome");
         String platformVersion = TestController.getPlatformVersion(driver);
-        Integer apiLevelFromVersion = AndroidVersionUtil.getApiLevelFromVersion(platformVersion);
-        log.debug("thank you 1");
+        Integer apiLevelFromVersion = TestController.getApiLevelFromVersion(platformVersion);
+        TestLog.stepInfo("thank you 1");
         System.out.println("API level:" + apiLevelFromVersion);
         Thread.sleep(8000);
-        log.debug("thank you 2");
+        TestLog.stepInfo("thank you 2");
         System.out.println("welcome to my world");
         loginScreenFactory.loginAndMove(driver, username, password);
-        log.debug(
+        TestLog.stepInfo(
                 "thank you 3");
         System.out.println("second entry to my world");
         loginScreenFactory.menuItemNavigate(driver);
@@ -74,6 +64,7 @@ public class LoginTest {
     public void stopAppium() throws IOException, InterruptedException {
         driver.quit();
         AppiumController.stopAppium();
+        ExtentManager.getReporter().flush();
     }
 
     @BeforeMethod
@@ -87,9 +78,9 @@ public class LoginTest {
         //taking screen shot in failed case
         if (result.getStatus() == ITestResult.FAILURE) {
             TestController.takeScreenShot(driver, testName);
-            log.info("Failed : " + testName + " method");
+            TestLog.stepInfo("Failed : " + testName + " method");
         } else {
-            log.info("Passed : " + testName + " method");
+            TestLog.stepInfo("Passed : " + testName + " method");
         }
     }
 

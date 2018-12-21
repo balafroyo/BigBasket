@@ -25,7 +25,6 @@ public class LoginScreenFactory {
     private WebElement loginButton;
     @FindBy(id = AppConstants.PACKAGE_NAME + AppConstants.LOGIN_EMAIL_ID)
     private WebElement loginEmail;
-
     @FindBy(id = AppConstants.PACKAGE_NAME + AppConstants.LOGIN_PASSWORD)
     private WebElement loginPassword;
     @FindBy(id = AppConstants.PACKAGE_NAME + AppConstants.LOGIN_CONTINUE)
