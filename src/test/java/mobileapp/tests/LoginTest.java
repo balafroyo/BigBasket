@@ -7,33 +7,30 @@ package mobileapp.tests;
 import io.appium.java_client.android.AndroidDriver;
 import mobileapp.pageobjects.LoginScreenFactory;
 import mobileapp.reporting.ExtentManager;
-import mobileapp.reporting.ExtentTestManager;
 import mobileapp.reporting.TestLog;
-import mobileapp.utils.*;
-import org.apache.log4j.PropertyConfigurator;
+import mobileapp.utils.AppiumController;
+import mobileapp.utils.Retry;
+import mobileapp.utils.TestController;
+import mobileapp.utils.XLSTestDataLoader;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
-
 import java.io.IOException;
 import java.lang.reflect.Method;
-
-import org.apache.log4j.Logger;
 
 public class LoginTest {
     public AndroidDriver driver = null;
     private LoginScreenFactory loginScreenFactory;
     LoginScreenFactory loginFactory;
     XLSTestDataLoader testdataLoader = new XLSTestDataLoader();
-
-    String testName;
+   public  String testName;
 
 
 
 
     @Test(groups = {"sanity"}, dataProvider = "loginData", priority = 2,retryAnalyzer=Retry.class)
     public void onboarding(String username, String password) throws InterruptedException {
-        TestLog.testStart("heolllo ", "onboarding method");
+        TestLog.testStart(" "+testName, "onboarding method");
         TestLog.stepInfo("welcome");
         String platformVersion = TestController.getPlatformVersion(driver);
         Integer apiLevelFromVersion = TestController.getApiLevelFromVersion(platformVersion);
@@ -41,14 +38,12 @@ public class LoginTest {
         System.out.println("API level:" + apiLevelFromVersion);
         Thread.sleep(8000);
         TestLog.stepInfo("thank you 2");
-        System.out.println("welcome to my world");
         loginScreenFactory.loginAndMove(driver, username, password);
-        TestLog.stepInfo(
-                "thank you 3");
-        System.out.println("second entry to my world");
+        TestLog.stepInfo("thank you 3");
         loginScreenFactory.menuItemNavigate(driver);
         Thread.sleep(8000);
 
+        System.out.println("empty" );
     }
 
     @BeforeSuite

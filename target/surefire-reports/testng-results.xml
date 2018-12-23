@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="62831" started-at="2018-12-22T04:00:07Z" finished-at="2018-12-22T04:01:10Z">
+    <groups>
+      <group name="sanity">
+        <method signature="LoginTest.onboarding(java.lang.String, java.lang.String)[pri:2, instance:mobileapp.tests.LoginTest@dfd3711]" name="onboarding" class="mobileapp.tests.LoginTest"/>
+      </group> <!-- sanity -->
+    </groups>
+    <test name="Test" duration-ms="62831" started-at="2018-12-22T04:00:07Z" finished-at="2018-12-22T04:01:10Z">
+      <class name="mobileapp.tests.LoginTest">
+        <test-method status="PASS" signature="startAppium()[pri:0, instance:mobileapp.tests.LoginTest@dfd3711]" name="startAppium" is-config="true" duration-ms="31570" started-at="2018-12-22T09:29:36Z" finished-at="2018-12-22T09:30:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startAppium -->
+        <test-method status="PASS" signature="getMethodName(java.lang.reflect.Method)[pri:0, instance:mobileapp.tests.LoginTest@dfd3711]" name="getMethodName" is-config="true" duration-ms="1" started-at="2018-12-22T09:30:08Z" finished-at="2018-12-22T09:30:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void mobileapp.tests.LoginTest.onboarding(java.lang.String,java.lang.String) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getMethodName -->
+        <test-method status="PASS" signature="onboarding(java.lang.String, java.lang.String)[pri:2, instance:mobileapp.tests.LoginTest@dfd3711]" name="onboarding" duration-ms="62607" started-at="2018-12-22T09:30:08Z" data-provider="loginData" finished-at="2018-12-22T09:31:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[credr3.whizdm@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mangomist]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- onboarding -->
+        <test-method status="PASS" signature="verifyTest(org.testng.ITestResult)[pri:0, instance:mobileapp.tests.LoginTest@dfd3711]" name="verifyTest" is-config="true" duration-ms="1" started-at="2018-12-22T09:31:10Z" finished-at="2018-12-22T09:31:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=onboarding status=SUCCESS method=LoginTest.onboarding(java.lang.String, java.lang.String)[pri:2, instance:mobileapp.tests.LoginTest@dfd3711] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTest -->
+        <test-method status="PASS" signature="stopAppium()[pri:0, instance:mobileapp.tests.LoginTest@dfd3711]" name="stopAppium" is-config="true" duration-ms="9242" started-at="2018-12-22T09:31:16Z" finished-at="2018-12-22T09:31:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopAppium -->
+      </class> <!-- mobileapp.tests.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
