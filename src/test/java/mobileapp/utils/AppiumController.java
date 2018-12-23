@@ -6,15 +6,8 @@ package mobileapp.utils;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -31,7 +24,7 @@ public class AppiumController {
     // private static Process process;
     private static String folderPath = "";
     //  private static String APPIUMSERVERSTART = "appium";
-
+   private String PATH =System.getProperty("user.dir") + "/resources/bigbasketNovember.apk";
 
     public static AndroidDriver startAppium() throws IOException, InterruptedException {
 
@@ -55,15 +48,16 @@ public class AppiumController {
         String url = service.getUrl().toString();
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "Appium");
-        capabilities.setCapability(MobileCapabilityType.APP, "/Users/balakrishnan/Desktop/APK/bigbasketNovember.apk");
+
+
+        capabilities.setCapability(MobileCapabilityType.APP, "/Users/balakrishnan/Documents/workspace/BigBasket/resources/bigbasketNovember.apk");
         capabilities.setCapability("platformName", properties.getProperty("PLATFORM_NAME"));
-        capabilities.setCapability("platformName", properties.getProperty("PLATFORM_VERSION"));
+        capabilities.setCapability("platformVersion", properties.getProperty("PLATFORM_VERSION"));
         capabilities.setCapability("deviceName", properties.getProperty("DEVICE_NAME"));
         capabilities.setCapability("appPackage", properties.getProperty("APP_PACKAGE"));
         capabilities.setCapability("autoGrantPermission", "true");
         capabilities.setCapability("unicodeKeyboard", true);
         capabilities.setCapability("resetKeyboard", true);
-
         try {
             driver = new AndroidDriver(new URL(url), capabilities);
             driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

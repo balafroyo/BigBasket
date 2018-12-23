@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="AutomationSuite" verbose="1" parallel="tests" thread-count="2">
   <listeners>
     <listener class-name="mobileapp.reporting.TestListener"/>
   </listeners>
 
-  <test thread-count="5" name="Test">
+  <test name="Test for automation">
     <classes>
       <class name="mobileapp.tests.LoginTest"/>
     </classes>
   </test> <!-- Test -->
+
+
+
 </suite> <!-- Suite -->
